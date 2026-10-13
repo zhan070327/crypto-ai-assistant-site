@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Crypto AI Assistant.">
+  <meta name="color-scheme" content="light">
+  <title>Privacy Policy — Crypto AI Assistant</title>
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Crypto AI Assistant home">
+      <img src="mark.svg" alt="" width="34" height="34">
+      <span>Crypto AI Assistant</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a aria-current="page" href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
+
+  <main id="main" class="legal-layout">
+    <aside class="legal-meta">
+      <p class="section-index">Privacy Policy</p>
+      <h1>Your data stays local by design.</h1>
+      <p>Effective: October 13, 2026<br>Last updated: October 13, 2026</p>
+      <nav aria-label="Privacy policy sections">
+        <a href="#overview">Overview</a>
+        <a href="#information">Information collected</a>
+        <a href="#google-data">Gmail API permissions</a>
+        <a href="#use">How information is used</a>
+        <a href="#storage">Local storage & retention</a>
+        <a href="#security">Security measures</a>
+        <a href="#third-parties">Third-party APIs</a>
+        <a href="#control">User control</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </aside>
+
+    <article class="legal-copy">
+      <section id="overview">
+        <h2>1. Overview</h2>
+        <p>This Privacy Policy describes how Crypto AI Assistant (the “Application”) handles information. The Application is personal, locally operated software for cryptocurrency market research, paper trading, risk analysis, and user-configured notifications. The public website is informational only and has no account, login, advertising, analytics, or tracking scripts.</p>
+        <p>The Application does not execute real cryptocurrency trades and does not connect to an OKX trading account.</p>
+      </section>
+
+      <section id="information">
+        <h2>2. Information collected</h2>
+        <p>The local Application processes the following categories of information when the user enables or uses the relevant features:</p>
+        <ul>
+          <li><strong>OAuth authorization data:</strong> a Google OAuth access token, refresh token, client identifier, token endpoint information, granted scope, and expiry information needed to send mail through the Gmail API.</li>
+          <li><strong>Notification configuration:</strong> whether Gmail and macOS notifications are enabled, the user-configured recipient email address, report schedule, risk thresholds, and price alerts.</li>
+          <li><strong>Market and reference data:</strong> public cryptocurrency quotes, historical candles, calculated indicators, strategy signals, and USD/SGD reference rates.</li>
+          <li><strong>Paper-trading and risk data:</strong> simulated account balances, positions, trades, prices, fees, reasons, and user-entered risk assumptions.</li>
+          <li><strong>Operational records:</strong> synchronization status, task execution records, notification-delivery status, error messages, and locally generated reports.</li>
+        </ul>
+        <p>The Application does not intentionally collect passwords, private cryptocurrency keys, seed phrases, real brokerage credentials, or real trading-account history.</p>
+      </section>
+
+      <section id="google-data">
+        <h2>3. Gmail API permissions and Google user data</h2>
+        <p>The Application requests only this Google OAuth scope:</p>
+        <p class="scope-line"><code>https://www.googleapis.com/auth/gmail.send</code></p>
+        <p>This permission is used solely to send user-configured market alerts, risk notifications, system-failure notices, and daily investment reports from the Google Account that the user authorizes. Email messages are sent only to the recipient address configured by the user.</p>
+        <p>The Application does <strong>not</strong> request or use permission to read the Gmail inbox, read message history, list contacts, inspect labels, manage drafts, delete email, or access unrelated Google Account data.</p>
+        <p>Google OAuth tokens are used only to authenticate Gmail API send requests. They are not sold, rented, used for advertising, or shared with data brokers. Information received from Google APIs is handled in accordance with the Google API Services User Data Policy, including its Limited Use requirements.</p>
+      </section>
+
+      <section id="use">
+        <h2>4. How information is used</h2>
+        <p>Information is used to:</p>
+        <ul>
+          <li>display market information and completed-candle technical analysis;</li>
+          <li>run historical strategy tests and paper-trading calculations;</li>
+          <li>calculate position risk, fees, profit and loss, and SGD estimates;</li>
+          <li>detect user-configured alerts and prevent duplicate notifications;</li>
+          <li>create local reports and, when enabled, send them through Gmail;</li>
+          <li>refresh an expired Gmail access token using the stored refresh token; and</li>
+          <li>diagnose data-source, authorization, delivery, and scheduled-task failures.</li>
+        </ul>
+        <p>The Application does not sell personal information and does not use Google user data for advertising, credit decisions, surveillance, or training generalized artificial-intelligence models.</p>
+      </section>
+
+      <section id="storage">
+        <h2>5. Local data storage and retention</h2>
+        <p>The Application runs on the user’s Mac. Google OAuth token data is stored in the current user’s macOS Keychain. The downloaded OAuth client configuration is stored in a local <code>secrets</code> directory. Market data, reference exchange rates, notification settings, the configured recipient address, paper trades, notification history, task records, and error information are stored in a local SQLite database. Generated reports and operational logs are stored as local files.</p>
+        <p>These files are not uploaded to this public website or its GitHub repository. Repository ignore rules exclude the secrets directory, token or credential files, environment files, SQLite databases, logs, and generated investment reports.</p>
+        <p>Local information is retained until the user deletes it, removes the Application, clears the relevant macOS Keychain entry, or removes the Application’s local database, reports, and logs. Delivery copies sent through Gmail are retained under the sender’s and recipient’s Gmail settings and Google’s applicable policies.</p>
+      </section>
+
+      <section id="security">
+        <h2>6. Security measures</h2>
+        <p>The Application uses the macOS Keychain for OAuth token storage, requests the narrow Gmail send-only scope, keeps credential files outside published source content, and does not place secrets in the website. The public website is delivered over HTTPS by GitHub Pages and contains no forms or client-side tracking scripts.</p>
+        <p>No security method is perfect. The user remains responsible for macOS account security, operating-system updates, local backups, repository review, and revoking access if the device or account may be compromised.</p>
+      </section>
+
+      <section id="third-parties">
+        <h2>7. Third-party APIs and services</h2>
+        <p>The local Application uses the following services:</p>
+        <ul>
+          <li><strong>Google Gmail API</strong> to send authorized notifications and reports;</li>
+          <li><strong>Kraken public REST API</strong> for unauthenticated cryptocurrency quotes and candles;</li>
+          <li><strong>Frankfurter API</strong> for the daily USD/SGD reference exchange rate; and</li>
+          <li><strong>GitHub Pages</strong> to host this public informational website.</li>
+        </ul>
+        <p>Requests to these providers may expose ordinary network information such as an IP address and request metadata to the provider. Their processing is governed by their own terms and privacy notices. The public website itself does not call Kraken, Frankfurter, or Gmail.</p>
+      </section>
+
+      <section id="control">
+        <h2>8. User control and revocation</h2>
+        <p>The user can disable Gmail notifications in the local Dashboard, change the recipient and alert settings, or stop the scheduled tasks. Google authorization can be revoked from the Google Account’s third-party connections page. Revocation prevents future Gmail API sends until the user authorizes again.</p>
+        <p>To remove local data, the user can delete the Application’s macOS Keychain token and its local SQLite database, reports, logs, and OAuth client file. Deleting local paper-trading records is permanent and should be done only after any desired backup.</p>
+      </section>
+
+      <section id="children">
+        <h2>9. Children’s privacy</h2>
+        <p>The Application is not directed to children and is not designed to knowingly collect children’s personal information.</p>
+      </section>
+
+      <section id="updates">
+        <h2>10. Policy updates</h2>
+        <p>This policy may be updated when the Application’s features, data handling, third-party services, or legal obligations change. The effective date and last-updated date at the top of this page will be revised. Material changes should be reviewed before continued use.</p>
+      </section>
+
+      <section id="contact">
+        <h2>11. Contact information</h2>
+        <p>For privacy questions or requests, open an issue in the public <a href="https://github.com/zhan070327/crypto-ai-assistant-site/issues" rel="noopener noreferrer">Crypto AI Assistant website repository</a>. Do not include OAuth tokens, client secrets, cryptocurrency keys, personal reports, account details, or other sensitive information in a public issue.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div><strong>Crypto AI Assistant</strong><p>Personal cryptocurrency research software.</p></div>
+    <div class="footer-links"><a href="index.html">Home</a><a href="terms.html">Terms of Service</a></div>
+    <p class="copyright">© 2026 Crypto AI Assistant</p>
+  </footer>
+</body>
+</html>
